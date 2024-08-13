@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pipedrive Integration</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <h1>Pipedrive Integration (Salesautomators)</h1>
+        <iframe id="iframeWindow" src="iframe-content.html"></iframe>
+        <button onclick="openPopup()">NEW Create a job</button>
+
+        <div id="jobPopup" class="popup">
+            <h2>Create Job</h2>
+            <form id="jobForm">
+                <h3>Deal details</h3>
+                <input
+                    type="text"
+                    id="dealTitle"
+                    placeholder="Deal Title"
+                    required
+                />
+                <input type="number" id="dealValue" placeholder="Deal Value" />
+                <input type="text" id="dealCurrency" placeholder="Currency" />
+
+                <h3>Client details</h3>
+                <input
+                    type="text"
+                    id="clientName"
+                    placeholder="Name"
+                    required
+                />
+                <input
+                    type="text"
+                    id="clientSurname"
+                    placeholder="Surname"
+                    required
+                />
+                <input
+                    type="text"
+                    id="clientNumber"
+                    placeholder="Number"
+                    required
+                />
+                <input
+                    type="email"
+                    id="clientEmail"
+                    placeholder="Email"
+                    required
+                />
+
+                <h3>Job type</h3>
+                <select id="jobType">
+                    <option value="type1">Type 1</option>
+                    <option value="type2">Type 2</option>
+                </select>
+                <select id="state">
+                    <option value="state1">State 1</option>
+                    <option value="state2">State 2</option>
+                </select>
+                <textarea
+                    id="jobDescription"
+                    placeholder="Job Description"
+                ></textarea>
+
+                <h3>Service location</h3>
+                <input
+                    type="text"
+                    id="address"
+                    placeholder="Address"
+                    required
+                />
+                <input type="text" id="city" placeholder="City" required />
+                <input
+                    type="text"
+                    id="zipcode"
+                    placeholder="Zip Code"
+                    required
+                />
+                <select id="serviceState">
+                    <option value="state1">State 1</option>
+                    <option value="state2">State 2</option>
+                </select>
+
+                <h3>Scheduled</h3>
+                <input type="date" id="date" required />
+                <input type="time" id="time" required />
+                <input
+                    type="text"
+                    id="specialty"
+                    placeholder="Specialty"
+                    required
+                />
+
+                <button
+                    type="button"
+                    id="createJobButton"
+                    class="button-yellow"
+                    onclick="createJob()"
+                >
+                    Create job
+                </button>
+                <button type="button" class="button-gray" onclick="saveInfo()">
+                    Save info
+                </button>
+            </form>
+            <div id="popupMessage" class="popup-message">
+                Job is created! <a href="#" id="viewDeal">View Deal</a>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
