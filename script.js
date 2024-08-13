@@ -1,3 +1,5 @@
+const apiToken = process.env.API_TOKEN;
+
 function openPopup() {
     document.getElementById("jobPopup").classList.add("show");
 }
@@ -12,7 +14,7 @@ async function createJob() {
     };
     try {
         const response = await fetch(
-            "https://api.pipedrive.com/v1/deals?api_token=MY_GREAT_TOKEN",
+            `https://api.pipedrive.com/v1/deals?api_token=${apiToken}`,
             {
                 method: "POST",
                 headers: {
