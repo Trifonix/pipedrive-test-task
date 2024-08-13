@@ -1,4 +1,3 @@
-// Функция для открытия всплывающего окна
 function openPopup() {
     document.getElementById("jobPopup").classList.add("show");
 }
